@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+		git clone https://github.com/softwareyoga/docker-tomcat-tutorial.git
+		ls
             }
         }
         stage('Test') {
