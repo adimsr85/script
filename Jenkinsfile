@@ -1,23 +1,25 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh 'git clone https://github.com/softwareyoga/docker-tomcat-tutorial.git'
-		sh 'ls'
+                sh 'git clone https://github.com/softwareyoga/docker-tomcat-tutorial.git'
+                sh 'ls'
+				sh 'docker search tomcat'
             }
         }
-        stage('Test') {
+
+    } 
+	
+	agent {
+	
+	 stage('Deploy') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+				echo 'Deploying....'
+				agent { dockerfile true }
             }
         }
     }
+	       
 }
