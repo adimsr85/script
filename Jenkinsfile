@@ -6,11 +6,10 @@ pipeline {
                 echo 'Building..'
                 sh 'git clone https://github.com/softwareyoga/docker-tomcat-tutorial.git'
                 sh 'ls'
-				sh 'docker search tomcat'
-            }
-        }
+		sh 'docker search tomcat'
+            		}
+        	}
 
-    } 
 	
 	
 	 stage('Deploy') {
@@ -20,7 +19,7 @@ pipeline {
 				sh 'docker build -t mywebapp .'
 				sh 'docker image ls'
 				sh 'docker run -p 80:8088 mywebapp'
-            }
-    }
-	       
+            		}
+    		}
+	}	       
 }
