@@ -18,6 +18,9 @@ pipeline {
             steps {
 				echo 'Deploying....'
 				agent { dockerfile true }
+				sh 'docker build -t mywebapp .'
+				sh 'docker image ls'
+				sh 'docker run -p 80:8088 mywebapp'
             }
         }
     }
