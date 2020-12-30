@@ -12,7 +12,6 @@ pipeline {
 
     } 
 	
-	agent {
 	
 	 stage('Deploy') {
 				agent { dockerfile true }
@@ -22,7 +21,6 @@ pipeline {
 				sh 'docker image ls'
 				sh 'docker run -p 80:8088 mywebapp'
             }
-        }
     }
 	       
 }
