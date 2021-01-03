@@ -9,4 +9,4 @@ EXPOSE 8088
 CMD chmod +x /usr/local/tomcat/bin/catalina.sh
 RUN dos2unix /usr/local/tomcat/bin/catalina.sh
 
-CMD [“catalina.sh”, “run”]
+CMD ["catalina.sh", "run"]
