@@ -19,7 +19,7 @@ pipeline {
 				echo 'Deploying....'
 				sh 'docker build -t mywebapp .'
 				sh 'docker image ls'
-				sh 'docker run -p 80:8088 mywebapp'
+				sh 'docker run -p 99:9999 mywebapp'
             		}
     		}
 	}	       
