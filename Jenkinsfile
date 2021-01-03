@@ -10,11 +10,12 @@ pipeline {
             		}
         	}
 
-				agent { dockerfile true }
 	
 	
 	 stage('Deploy') {
             steps {
+				sh 'echo presentwd=$PWD'
+				agent { dockerfile true }
 				echo 'Deploying....'
 				sh 'docker build -t mywebapp .'
 				sh 'docker image ls'
