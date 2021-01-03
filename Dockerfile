@@ -7,6 +7,6 @@ ADD sample.war /usr/local/tomcat/webapps/
 
 EXPOSE 8088
 CMD chmod +x /usr/local/tomcat/bin/catalina.sh
-RUN dos2unix *.sh
+RUN "dos2unix *.sh"
 
 CMD [“catalina.sh”, “run”]
