@@ -14,7 +14,7 @@ pipeline {
 	
 	
 	 stage('Deploy') {
-				agent { dockerfile true }
+				//agent { dockerfile true }
             steps {
 				echo 'Deploying....'
 				sh 'docker build -t mywebapp .'
