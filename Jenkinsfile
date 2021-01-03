@@ -13,9 +13,9 @@ pipeline {
 	
 	
 	 stage('Deploy') {
-            steps {
 				sh 'echo presentwd=$PWD'
 				agent { dockerfile true }
+            steps {
 				echo 'Deploying....'
 				sh 'docker build -t mywebapp .'
 				sh 'docker image ls'
