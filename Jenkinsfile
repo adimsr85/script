@@ -8,7 +8,8 @@ pipeline {
                 sh 'ls'
 		sh 'docker search tomcat'
 		sh 'echo presentwd=$PWD'
-            		}
+            	sh 'cp 	/var/lib/jenkins/workspace/first_pipeline/docker-tomcat-tutorial/sample.war .'
+			}
         	}
 
 	
