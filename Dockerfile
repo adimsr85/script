@@ -6,5 +6,6 @@ RUN echo "$PWD"
 ADD sample.war /usr/local/tomcat/webapps/
 
 EXPOSE 8088
+CMD chmod +x /usr/local/tomcat/bin/catalina.sh
 
 CMD [“catalina.sh”, “run”]
